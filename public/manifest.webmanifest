@@ -1,0 +1,17 @@
+{
+  "name": "UPWORD — Hospitality Digital Growth Agency",
+  "short_name": "UPWORD",
+  "description": "Hospitality digital growth agency in Indore offering hotel website development, SEO services, WhatsApp automation, and digital marketing across Nashik, Trimbakeshwar, Ujjain, and Indore.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15120F",
+  "theme_color": "#15120F",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

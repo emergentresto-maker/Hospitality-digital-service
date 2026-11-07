@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-upword-bg: #15120F;
+  --color-upword-secondary: #1C1814;
+  --color-upword-card: #211B16;
+  --color-upword-elevated: #28211B;
+  --color-upword-gold: #F4B942;
+  --color-upword-cta: #FFBF47;
+  --color-upword-text: #F5F1EA;
+  --color-upword-muted: #C8BFB3;
+  --color-upword-subtle: #968C7E;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Reusable Design System Utility Classes */
+@layer components {
+  /* Navigation Link with Luxury Gold Underline Hover */
+  .nav-link-luxury {
+    position: relative;
+    color: var(--color-text-secondary);
+    transition: color var(--duration-fast) var(--ease-luxury);
+  }
+
+  .nav-link-luxury::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--color-brand-gold);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 180ms var(--ease-luxury);
+  }
+
+  .nav-link-luxury:hover {
+    color: var(--color-text-primary);
+  }
+
+  .nav-link-luxury:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /* Interactive Card Lift & Border Illumination */
+  .card-hover-luxury {
+    transition:
+      transform 180ms var(--ease-luxury),
+      border-color 180ms var(--ease-luxury),
+      background-color 180ms var(--ease-luxury);
+  }
+
+  .card-hover-luxury:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

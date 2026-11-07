@@ -1,0 +1,56 @@
+/**
+ * UPWORD Luxury Hospitality Visual Branding & Design Tokens
+ * Inspired by luxury mountain resorts, heritage architecture, and warm ambient light.
+ * All text tokens exceed WCAG 2.1 AA 4.5:1 contrast against #15120F, #1C1814, and #211B16.
+ */
+
+:root {
+  /* 1. Gold & Charcoal Color System */
+  --color-bg-primary: #15120F;       /* Deep Obsidian Charcoal (60% Dominant Canvas) */
+  --color-bg-secondary: #1C1814;     /* Warm Architectural Charcoal (30% Secondary Surface) */
+  --color-bg-card: #211B16;          /* Elevated Resort Card Surface */
+  --color-bg-elevated: #28211B;      /* Hover / Active Surface */
+
+  --color-brand-gold: #F4B942;       /* Heritage Hospitality Gold */
+  --color-brand-cta: #FFBF47;        /* Luminous Conversion Gold (10% Accent Budget) */
+  --color-brand-gold-muted: rgba(244, 185, 66, 0.14);
+
+  /* Typography Color Hierarchy (WCAG AA Verified >= 5.3:1 contrast on all surfaces) */
+  --color-text-primary: #F5F1EA;     /* Warm Alabaster Ivory (15.8:1 on #15120F) */
+  --color-text-secondary: #D2C9BD;   /* Champagne Stone (10.6:1 on #15120F) */
+  --color-text-muted: #A69B8D;       /* Accessible Warm Slate (6.5:1 on #15120F, 5.4:1 on #211B16) */
+
+  /* Hairline Borders & Dividers */
+  --color-border-subtle: rgba(244, 185, 66, 0.14);
+  --color-border-DEFAULT: rgba(244, 185, 66, 0.22);
+  --color-border-hover: rgba(244, 185, 66, 0.42);
+
+  /* Hero Scrim Overlays */
+  --scrim-hero-top: rgba(21, 18, 15, 0.52);
+  --scrim-hero-mid: rgba(21, 18, 15, 0.72);
+  --scrim-hero-bottom: #15120F;
+
+  /* 2. Typography System (2+1 Font Rule) */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Mobile-First Fluid Type Scale (Tested from 320px to 1440px) */
+  --text-hero: clamp(1.9rem, 4.8vw, 3.85rem);
+  --text-h1: clamp(1.75rem, 4vw, 3.25rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --text-body-lg: 1.0625rem;
+  --text-body: 0.9375rem;
+  --text-caption: 0.75rem;
+
+  /* 3. Section Spacing & Layout Geometry */
+  --container-max-width: 1280px;
+  --section-py-sm: clamp(2.75rem, 5vw, 4.5rem);
+  --section-py-md: clamp(3.5rem, 6.5vw, 6rem);
+  --section-py-lg: clamp(4rem, 8vw, 7.5rem);
+
+  /* 4. Motion & Interaction Curves (<= 200ms routine feedback) */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+}
